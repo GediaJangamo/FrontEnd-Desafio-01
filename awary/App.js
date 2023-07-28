@@ -2,18 +2,17 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from './src/components/Home'
-import FormRegister from './src/components/Home'
-import FormLogin from './src/components/Home'
+import FormRegister from './src/components/FormRegister'
+import FormLogin from './src/components/FormLogin'
 import {useFonts} from 'expo-font';
-
-
 
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+
   const [fontsLoaded] = useFonts({
-    Lobster: require("./assets/fonts/Lobster/Lobster-Regular.ttf"),
+    Lobster: require("./assets/fonts/Lobster/Lobster/Lobster-Regular.ttf"),
   });
 
   if (!fontsLoaded) {
@@ -24,18 +23,29 @@ export default function App() {
 
   return (
         <NavigationContainer>
-          <Stack.Navigator initialRouteName='Home'>
+          <Stack.Navigator >
             <Stack.Screen  
               name="Home"
               component={Home}
               options={{
-                headerTintColor:"#ffffff",
-                 headerStyle: { backgroundColor: "#409092" }
+                 headerTintColor:"#409092",
+                 headerStyle: { backgroundColor: "#409092" },
+                 headerShadowVisible: true,
+                 headerTitle: null,
                 
               }}
             />
 
-         <Stack.Screen name="Login" component={FormLogin} />
+         <Stack.Screen name="FormLogin" component={FormLogin}  
+               options={{
+                 headerTintColor:"#ffffff",
+                 headerStyle: { backgroundColor: "#409092" },
+                 headerShadowVisible: true,
+                 headerTitle: '',
+                
+              }}/>
+         
+         <Stack.Screen name="FormRegister" component={FormRegister} />
           </Stack.Navigator>
         </NavigationContainer>
   );

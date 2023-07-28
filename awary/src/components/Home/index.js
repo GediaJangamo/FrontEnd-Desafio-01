@@ -1,13 +1,19 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, TouchableOpacity} from 'react-native';
 import styles from './style';
 
 
-export default function Home(){
+export default function Home({navigation}){
     
    return(
-   <View>
-        <Text style = {styles.container}> Awary </Text>
+   <View style = {styles.container}>
+        <Text style = {styles.texto}> Awary </Text>
+
+        <TouchableOpacity style = {styles.Button} 
+          onPress={() => navigation.navigate("FormLogin")}
+        >
+           <Text style = {styles.ButtonText}>GET STARTED</Text>
+        </TouchableOpacity>
     </View>
    )
 }

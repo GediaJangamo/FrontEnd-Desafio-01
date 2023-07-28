@@ -34,20 +34,8 @@ const styles = StyleSheet.create({
         textAlign: "center",
         fontSize:18,
         fontWeight:'bold',
-   },
-
-   EsqueceuContainer: {
-    display: "flex",
-    flexDirection:"row",
-    justifyContent: "space-between",
-    textAlign:"center",
-    
-   },
-
-   textEs: {
-    fontSize: 32,
-    textAlign:"center"
    }
+
 
 
 })

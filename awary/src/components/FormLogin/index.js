@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import styles from "./style";
 import { useFonts } from "expo-font";
+import {AntDesign} from "@expo/vector-icons"
 
 export default function FormLogin({ navigation }) {
   const [fontsLoaded] = useFonts({
@@ -40,18 +41,20 @@ export default function FormLogin({ navigation }) {
           <Text style={styles.ButtonText}>SIGN IN</Text>
         </TouchableOpacity>
 
-            <Text style={styles.EsqueceuContainer}>
+            <View style={styles.EsqueceuContainer}>
         
                <Text style={styles.textEs}>Esqueceu a senha?</Text>
             
                <Text style={styles.textEs}>Não tem conta?</Text>
             
-            </Text>
+            </View>
 
 
 
-        <TouchableOpacity style={styles.Button}>
-          <Text style={styles.ButtonText}>SIGN IN WITH GOOGLE</Text>
+        <TouchableOpacity style={styles.ButtonGoogle}>
+
+          <AntDesign name="google" size={28} color="white" style={styles.Icon} />
+          <Text style={styles.ButtonTextGoogle}> SIGN IN WITH GOOGLE</Text>
         </TouchableOpacity>
       </Pressable>
     </View>

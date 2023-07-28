@@ -3,7 +3,6 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
    container : {
-    //    backgroundColor: "#409092",
        height: '100%',
        marginTop: 20,   
    },
@@ -29,7 +28,7 @@ const styles = StyleSheet.create({
      marginLeft: 10,
      marginRight: 10,
      marginTop:15,
-     borderRadius:50,
+     borderRadius:30,
      padding:15,
    },
 
@@ -37,8 +36,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#409092",
     marginLeft: 10,
     marginRight: 10,
-    height:'14%',
-    marginTop: 20,
+    height:'13%',
+    marginTop: 25,
     borderRadius:50,
    },
 
@@ -48,7 +47,50 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontWeight:'bold',
     fontSize:18,
+   },
+
+   ButtonGoogle: {
+      display: "flex",
+      flexDirection: "row",
+      backgroundColor: "#409092",
+      marginLeft: 10,
+      marginRight: 10,
+      height:'13%',
+      marginTop: 25,
+     borderRadius:50,
+   
+   },
+
+   ButtonTextGoogle: {
+       color:"#ffffff",
+       fontWeight:'bold',
+       fontSize:18,
+       lineHeight:60,
+       textAlign: "center",
+       marginLeft:35,
+   },
+
+   Icon: {
+       lineHeight:60,
+       fontSize:32,
+       marginLeft:10,
+   },
+
+   EsqueceuContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    marginTop:10,
+
+   },
+
+   textEs: {
+    fontSize: 16,
+    borderBottomColor: "#409092",
+    borderBottomWidth:1,
    }
+
+
 
 })
 

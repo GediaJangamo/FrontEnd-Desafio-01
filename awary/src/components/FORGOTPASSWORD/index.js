@@ -11,7 +11,7 @@ import styles from "./style";
 import { useFonts } from "expo-font";
 
 
-export default function FormLogin({ navigation }) {
+export default function FORGOTPASSWORD({ navigation }) {
   const [fontsLoaded] = useFonts({
     Lobster: require("../../../assets/fonts/Lobster/Lobster/Lobster-Regular.ttf"),
   });
@@ -22,52 +22,32 @@ export default function FormLogin({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.texto}>Create an Account</Text>
+      <Text style={styles.texto}>Reset Password</Text>
 
       <Pressable onPress={Keyboard.dismiss}>
-        {/* <Text style={styles.label}>Email</Text> */}
+        <Text style={styles.label}>New Password</Text>
         <TextInput
           style={styles.Input}
-          placeholder="Username"
+          placeholder="Enter you new Password"
         />
 
-        {/* <Text style={styles.label}>Password</Text> */}
+        <Text style={styles.label}>Confirm Password</Text>
         <TextInput
           style={styles.Input}
-          placeholder="Email"
+          placeholder="Enter the same Password"
         />
-
-        <TextInput
-          style={styles.Input}
-          placeholder="Senha"
-        />
-
-       <View />
-
-
-        <TextInput
-          style={styles.Input2}
-          placeholder="Data Nascimento"
-        />
-
-        <TextInput
-          style={styles.Input}
-          placeholder="Cidade"
-        />
-
-
 
         <TouchableOpacity style={styles.Button}>
-          <Text style={styles.ButtonText}>Create</Text>
+          <Text style={styles.ButtonText}>Reset Password</Text>
         </TouchableOpacity>
 
-            {/* <View style={styles.EsqueceuContainer}>
+            <View style={styles.EsqueceuContainer}>
                <Text style={styles.textEs}   
                onPress={() => navigation.navigate("FormLogin")}
                
                >Login? Click here</Text>
             
-            </View> */}
+            </View>
        
       </Pressable>
     </View>

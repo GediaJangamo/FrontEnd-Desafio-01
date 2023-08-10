@@ -5,6 +5,8 @@ import Home from './src/components/Home'
 import FormRegister from './src/components/FormRegister'
 import FormLogin from './src/components/FormLogin'
 import {useFonts} from 'expo-font';
+import FORGOTPASSWORD from './src/components/FORGOTPASSWORD';
+import FEED from './src/components/FEED';
 
 
 const Stack = createNativeStackNavigator();
@@ -17,7 +19,6 @@ export default function App() {
 
   if (!fontsLoaded) {
     
-    //return <Preloader/>;
     return null;
   }
 
@@ -29,9 +30,9 @@ export default function App() {
               component={Home}
               options={{
                  headerTintColor:"#409092",
-                 headerStyle: { backgroundColor: "#409092" },
+                 headerStyle: { backgroundColor: "#6F8BAB" },
                  headerShadowVisible: true,
-                 headerTitle: null,
+                 headerTitle: '',
                 
               }}
             />
@@ -39,13 +40,46 @@ export default function App() {
          <Stack.Screen name="FormLogin" component={FormLogin}  
                options={{
                  headerTintColor:"#ffffff",
-                 headerStyle: { backgroundColor: "#409092" },
+                 headerStyle: { backgroundColor: "#B0BEC5" },
                  headerShadowVisible: true,
                  headerTitle: '',
                 
               }}/>
          
-         <Stack.Screen name="FormRegister" component={FormRegister} />
+         <Stack.Screen name="FormRegister" component={FormRegister}  
+          options={{
+            headerTintColor:"#ffffff",
+            headerStyle: { backgroundColor: "#B0BEC5" },
+            headerShadowVisible: true,
+            headerTitle: '',
+           
+         }}
+         
+         
+         />
+         <Stack.Screen name="FORGOTPASSWORD" component={FORGOTPASSWORD} 
+           options={{
+            headerTintColor:"#ffffff",
+            headerStyle: { backgroundColor: "#6F8BAB" },
+            headerShadowVisible: true,
+            headerTitle: '',
+           
+         }}
+         
+         
+         />
+
+         <Stack.Screen name="FEED" component={FEED} 
+           options={{
+            headerTintColor:"#ffffff",
+            headerStyle: { backgroundColor: "#6F8BAB" },
+            headerShadowVisible: true,
+            headerTitle: '',
+           
+         }}
+         
+         
+         />
           </Stack.Navigator>
         </NavigationContainer>
   );

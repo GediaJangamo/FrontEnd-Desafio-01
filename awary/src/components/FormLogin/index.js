@@ -23,38 +23,59 @@ export default function FormLogin({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={styles.texto}>Awary</Text>
+          
+      <Text style={styles.textEs}   
+       onPress={() => navigation.navigate("FormRegister")}
+               
+      >Don't have an account?</Text>
 
       <Pressable onPress={Keyboard.dismiss}>
-        <Text style={styles.label}>Email</Text>
+        {/* <Text style={styles.label}>Email</Text> */}
         <TextInput
           style={styles.Input}
-          placeholder="ex:gedyahgennyfah@gmail.com"
+          placeholder="Email"
         />
 
-        <Text style={styles.label}>Senha</Text>
+        {/* <Text style={styles.label}>Senha</Text> */}
         <TextInput
           style={styles.Input}
-          placeholder="introduza uma senha forte"
+          placeholder="Password"
         />
 
-        <TouchableOpacity style={styles.Button}>
+        <Text style={styles.textEs}  
+                onPress={() => navigation.navigate("FORGOTPASSWORD")}
+               
+        >Forgot Password?</Text>
+
+        <TouchableOpacity style={styles.Button} 
+         onPress={() => navigation.navigate("FEED")}
+        >
           <Text style={styles.ButtonText}>SIGN IN</Text>
         </TouchableOpacity>
 
-            <View style={styles.EsqueceuContainer}>
+            {/* <View style={styles.EsqueceuContainer}>
         
-               <Text style={styles.textEs}>Esqueceu a senha?</Text>
+               <Text style={styles.textEs}  
+                onPress={() => navigation.navigate("FORGOTPASSWORD")}
+               
+               >Forgot Password?</Text>
             
-               <Text style={styles.textEs}>Não tem conta?</Text>
+               <Text style={styles.textEs}   
+               onPress={() => navigation.navigate("FormRegister")}
+               
+               >Don't have an account?</Text>
             
-            </View>
+            </View> */}
 
-
+               <Text style={styles.textSign}   
+               onPress={() => navigation.navigate("FormRegister")}
+               
+               >or sign in with</Text>
 
         <TouchableOpacity style={styles.ButtonGoogle}>
 
           <AntDesign name="google" size={28} color="white" style={styles.Icon} />
-          <Text style={styles.ButtonTextGoogle}> SIGN IN WITH GOOGLE</Text>
+          <Text style={styles.ButtonTextGoogle}>GOOGLE</Text>
         </TouchableOpacity>
       </Pressable>
     </View>
